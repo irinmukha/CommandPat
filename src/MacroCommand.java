@@ -14,13 +14,15 @@ public class MacroCommand implements Command {
 
     @Override
     public void execute() {
-        for (int i = 0; i < commands.length; i++) {
-            commands[i].execute();
+        for (Command command : commands) {
+            command.execute();
         }
     }
 
     @Override
     public void undo() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        for (Command command : commands) {
+            command.undo();
+        }
     }
 }

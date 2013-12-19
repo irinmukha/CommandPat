@@ -11,8 +11,8 @@ public class CeilingFanHighCommand implements Command {
     CeilingFan ceilinhFan;
     int prevSpeed;
 
-    public CeilingFanHighCommand(CeilingFan ceilinhFan) {
-        this.ceilinhFan = ceilinhFan;
+    public CeilingFanHighCommand(CeilingFan ceilingFan) {
+        this.ceilinhFan = ceilingFan;
     }
 
     @Override
