@@ -29,8 +29,8 @@ public class Main {
         TVOnCommand tvOnCommand = new TVOnCommand(tv);
         TVOffCommand tvOffCommand = new TVOffCommand(tv) ;
 
-        Command[] partyOn = {livimgRoomLightOnCommand, stereoOnWithCdCommand, tvOnCommand};
-        Command[] partyOff = {livingRoomLightOffCommand, stereoOffCommand, tvOffCommand};
+        Command[] partyOn = {garageDoorOpenCommand, livimgRoomLightOnCommand, stereoOnWithCdCommand, tvOnCommand, kitchenRoomLightOnCommand};
+        Command[] partyOff = {kitchenRoomLightOffCommand, livingRoomLightOffCommand, stereoOffCommand, tvOffCommand, garageDoorCloseCommand};
 
         MacroCommand partyOnMacro = new MacroCommand(partyOn);
         MacroCommand partyOffMacro = new MacroCommand(partyOff);
@@ -46,6 +46,9 @@ public class Main {
 
         System.out.println("----Pushing Macro OFF------");
         remoteControl.offButtonWasPressed(0);
+
+        System.out.println("----Macro UNDO------");
+        remoteControl.undoButtonWasPreessed();
         /*remoteControl.onButtonWasPressed(0);
         remoteControl.offButtonWasPressed(0);
         remoteControl.undoButtonWasPreessed();
